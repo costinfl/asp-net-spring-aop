@@ -43,7 +43,7 @@ namespace WebApplication1.Controllers
                     .ExecuteAsync();
                 IUser user = result.CurrentPage.ToList().First();
 
-                return View(user);
+                return View(user as User);
             }
             catch (AdalException)
             {
